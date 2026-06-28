@@ -1,0 +1,164 @@
+/* ---------------------------------------------------------------
+   Nicolas Perrin — personal site
+   Minimal, white, lots of whitespace. Edit content in index.html.
+   --------------------------------------------------------------- */
+
+:root {
+  --ink: #1a1a1a;
+  --muted: #6b6b6b;
+  --rule: #e8e8e8;
+  --link: #1a1a1a;
+  --maxw: 640px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: Charter, Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 7rem 1.5rem 4rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.avatar {
+  flex: 0 0 auto;
+  width: 104px;
+  height: 104px;
+  border-radius: 10px;
+  border: 1px solid var(--rule);
+  background: #fff;
+  object-fit: contain;
+  padding: 4px;
+}
+
+.hero-text h1 {
+  margin: 0 0 .35rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.intro {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+/* ---------- Sections ---------- */
+section {
+  margin: 3rem 0;
+}
+
+h2 {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0 0 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+p { margin: 0 0 1rem; }
+
+.muted { color: var(--muted); }
+
+/* ---------- Lists ---------- */
+ul.plain {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.plain li {
+  padding: 0.15rem 0;
+}
+
+ul.projects {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.projects li {
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+ul.projects li:last-child { border-bottom: 1px solid var(--rule); }
+
+.proj-title {
+  display: block;
+  font-weight: 600;
+  font-size: 1.02rem;
+}
+
+.proj-desc {
+  display: block;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Contact ---------- */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--link);
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.95rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.link:hover { border-bottom-color: var(--ink); }
+
+.link svg { color: var(--muted); }
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 4.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+footer p { margin: 0; }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 520px) {
+  main { padding: 3.5rem 1.25rem 3rem; }
+  .hero { flex-direction: column; align-items: flex-start; gap: 1.1rem; }
+  .hero-text h1 { font-size: 1.5rem; }
+}
