@@ -114,6 +114,16 @@ ul.projects li:last-child { border-bottom: 1px solid var(--rule); }
   font-size: 1.02rem;
 }
 
+.proj-title a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+
+.proj-title a:hover {
+  border-bottom-color: var(--ink);
+}
+
 .proj-desc {
   display: block;
   color: var(--muted);
